@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mis XV Años Alexa Nicole</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+/* BODY */
+body{
+  margin:0;
+  font-family:Poppins;
+  text-align:center;
+  background:url("fondo.jpg") no-repeat center center fixed;
+  background-size:cover;
+}
+
+/* CARD */
+.card{
+  max-width:420px;
+  margin:30px auto;
+  padding:20px;
+}
+
+/* TITULOS */
+h1{
+  font-family:Playfair Display;
+  color:#c89b3c;
+}
+
+/* IMAGENES GENERALES */
+img{
+  width:100%;
+  border-radius:15px;
+  margin:12px 0;
+  display:block;
+}
+
+/* SOBRE */
+#cover{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+#coverImg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* GALERIA */
+.gallery-container{
+  width:100%;
+  overflow:hidden;
+  margin:30px 0;
+}
+
+.gallery{
+  display:flex;
+  gap:12px;
+  animation: scrollGallery 130s linear infinite;
+}
+
+.gallery img{
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  border-radius:15px;
+  cursor:pointer;
+  flex-shrink:0;
+}
+
+/* ANIMACION */
+@keyframes scrollGallery{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-700%);
+  }
+}
+
+
+/* BOTONES */
+.btn{
+  display:block;
+
+  background: transparent;
+  color: #c89b3c;
+
+  border: none;  
+
+  padding: 10px;
+  margin: 12px 0;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  background: #c89b3c;
+  color: white;
+}
+
+.btn:hover{
+  background: #c89b3c;
+  color: white;
+}
+
+.btn:hover{
+  opacity:0.8;
+}
+
+/* CONTADOR */
+#countdown{
+  font-size:22px;
+  color:#c89b3c;
+  margin:15px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:15px;
+}
+
+#closeModal{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:35px;
+  color:white;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SOBRE -->
+<div id="cover" onclick="openInvitation()">
+  <img src="portada_inicio.jpg" id="coverImg">
+</div>
+
+<!-- MUSICA -->
+<audio id="music" loop>
+<source src="musica.mp3">
+</audio>
+
+<div class="card">
+
+<h1>Mis XV Años</h1>
+<h1>Alexa Nicole Barragán Mondragón</h1>
+
+<p>La vida se mide en momentos, y quiero que seas parte de este...</p>
+
+<img src="portada.jpg">
+
+<div id="countdown"></div>
+
+<h3>"Mi fiesta promete ser épica y no sería igual sin ti"</h3>
+
+<img src="XV.jpg">
+
+<h3>Mis papás:</h3>
+<p>Omar Barragán Carrasco</p>
+<p>Dulce Abigail Mondragón Méndez</p>
+
+<h3>Mis padrinos:</h3>
+<p>Marcos García Puga</p>
+<p>María del Carmen Mondragón Ríos</p>
+
+<h3>Momentos:</h3>
+
+<!-- GALERIA -->
+<div class="gallery-container">
+
+  <div class="gallery">
+
+  <!-- ORIGINAL -->
+  <img src="g3.jpg" onclick="openModal(this)">
+  <img src="g4.jpg" onclick="openModal(this)">
+  <img src="g5.jpg" onclick="openModal(this)">
+  <img src="g6.jpg" onclick="openModal(this)">
+  <img src="g7.jpg" onclick="openModal(this)">
+  <img src="g8.jpg" onclick="openModal(this)">
+  <img src="g9.jpg" onclick="openModal(this)">
+  <img src="g10.jpg" onclick="openModal(this)">
+  <img src="g11.jpg" onclick="openModal(this)">
+  <img src="g12.jpg" onclick="openModal(this)">
+
+  <!-- COPIA -->
+  <img src="g3.jpg" onclick="openModal(this)">
+  <img src="g4.jpg" onclick="openModal(this)">
+  <img src="g5.jpg" onclick="openModal(this)">
+  <img src="g6.jpg" onclick="openModal(this)">
+  <img src="g7.jpg" onclick="openModal(this)">
+  <img src="g8.jpg" onclick="openModal(this)">
+  <img src="g9.jpg" onclick="openModal(this)">
+  <img src="g10.jpg" onclick="openModal(this)">
+  <img src="g11.jpg" onclick="openModal(this)">
+  <img src="g12.jpg" onclick="openModal(this)">
+</div>
+
+</div>
+
+<h3>Misa 1:00 PM</h3>
+<p>Sábado 21 de febrero 2026</p>
+
+<h3>Iglesia San Miguel Arcángel</h3>
+
+<img src="iglesia.jpg">
+
+<a class="btn" href="https://maps.app.goo.gl/LYNbRYuKBRdqnHo77" target="_blank">
+Ver ubicación
+</a>
+
+<h3>Finca Eslava</h3>
+
+<img src="finca.jpg">
+
+<a class="btn" href="https://maps.app.goo.gl/YhXpho4T78QkXCJK8" target="_blank">
+Ver ubicación
+</a>
+
+<a class="btn"
+href="https://wa.me/525552480058?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Alexa"
+target="_blank">
+Confirmar asistencia
+</a>
+
+<p style="font-size:12px;color:#777">
+Color blush y dorado exclusivo
+</p>
+
+</div>
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+  <span id="closeModal">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+
+/* SOBRE */
+function openInvitation(){
+  document.getElementById("cover").style.display="none";
+  document.getElementById("music").play();
+}
+
+/* CONTADOR */
+const eventDate = new Date("2026-02-21T13:00:00").getTime();
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  const d = Math.floor(diff/(1000*60*60*24));
+  const h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+  const m = Math.floor((diff%(1000*60*60))/(1000*60));
+  const s = Math.floor((diff%(1000*60))/1000);
+
+  document.getElementById("countdown").innerHTML=
+  `Faltan ${d} días ${h}h ${m}m ${s}s`;
+},1000);
+
+/* MODAL */
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+const close = document.getElementById("closeModal");
+
+function openModal(img){
+  modal.style.display="flex";
+  modalImg.src = img.src;
+}
+
+close.onclick = ()=>{
+  modal.style.display="none";
+}
+
+modal.onclick = ()=>{
+  modal.style.display="none";
+}
+
+</script>
+
+</body>
+</html>
